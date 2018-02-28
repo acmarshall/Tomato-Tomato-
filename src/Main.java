@@ -6,12 +6,12 @@ public class Main {
     	Person.attr = "Spades Players";
     	Person.groupName = "Tomato, Tomato!";
 
-		 Person amber = new Person ();
-		 Person andrew = new Person ();
-		 Person christian = new Person ();
-		 Person branden = new Person();
+		 Person amber = new Person ("Amber", 27, "Female");
+		 Person andrew = new Person ("Andrew", 22, "Male");
+		 Person christian = new Person ("Christian",  26, "Male");
+		 Person branden = new Person("Branden", 33, "Male");
 
-		 amber.setName("Amber");
+		/* amber.setName("Amber");
 		 amber.setGender("Female");
 		 amber.setAge(27);
 
@@ -26,6 +26,7 @@ public class Main {
 		 andrew.setName("Andrew");
 		 andrew.setGender("Male");
 		 andrew.setAge(22);
+		*/
 
 	    String nameArr[] =  {amber.getName(), christian.getName(), branden.getName(), andrew.getName()};
 		String genderArr[] = {amber.getGender(), christian.getGender(), branden.getGender(), andrew.getGender()};
