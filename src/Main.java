@@ -2,52 +2,37 @@ import com.sun.org.apache.xpath.internal.SourceTree;
 
 public class Main {
 
-    public static void main(String[] args) {
-    	Person.attr = "Spades Players";
-    	Person.groupName = "Tomato, Tomato!";
+	public static void main(String[] args) {
+		Person.attr = "Spades Players";
+		Person.groupName = "Tomato, Tomato!";
 
-		 Person amber = new Person ("Amber", 27, "Female");
-		 Person andrew = new Person ("Andrew", 22, "Male");
-		 Person christian = new Person ("Christian",  26, "Male");
-		 Person branden = new Person("Branden", 33, "Male");
+		Person andrew = new Person("Andrew", 22, "Male");
+		Person branden = new Person("Branden", 33, "Male");
 
-		/* amber.setName("Amber");
-		 amber.setGender("Female");
-		 amber.setAge(27);
+		OutofStaters amber = new OutofStaters("Amber", 27, "Female", "Baltimore", "Maryland");
+		OutofStaters christian = new OutofStaters("Christian", 26, "Male", "Clemson", "North Carolina ");
 
-		 christian.setName("Christian");
-		 christian.setGender("Male");
-		 christian.setAge(26);
-
-		 branden.setName("Branden");
-		 branden.setGender("Male");
-		 branden.setAge(33);
-
-		 andrew.setName("Andrew");
-		 andrew.setGender("Male");
-		 andrew.setAge(22);
-		*/
-
-	    String nameArr[] =  {amber.getName(), christian.getName(), branden.getName(), andrew.getName()};
-		String genderArr[] = {amber.getGender(), christian.getGender(), branden.getGender(), andrew.getGender()};
-		int ageArr[] = {amber.getAge(), christian.getAge(), branden.getAge(), andrew.getAge()};
+		OutofStaters osArr[] = {amber, christian};
+		Person psArr[] = {branden, andrew};
 
 		System.out.println("Group Name: " + Person.groupName);
-		System.out.println( "Team Attribute: " + Person.attr );
+		System.out.println("Team Attribute: " + Person.attr);
 
 
-		for (int i=0; i<4; i++){
+		for (int i = 0; i < 2; i++) {
 			System.out.println("____________________________________ \n");
-			System.out.println("Name: " + nameArr[i]);
-			System.out.println("Gender: " + genderArr[i]);
-			System.out.println("Age: " + ageArr[i]);
+			System.out.println(osArr[i].toString());
+			System.out.println(osArr[i].printImFrom());
+		}
+
+			for (int j = 0; j < 2; j++) {
+				System.out.println("____________________________________ \n");
+				System.out.println(psArr[j].toString());
+
+
+			}
 
 
 		}
-
-
-
-
-
 	}
-}
+
